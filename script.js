@@ -4,6 +4,9 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Remove a classe de loading imediatamente para evitar que o site fique travado
+    document.body.classList.remove('gsap-loading');
+
     // --- Configurações Gerais ---
     const CONFIG = {
         whatsappNumber: '5511999999999',
@@ -11,21 +14,42 @@ document.addEventListener('DOMContentLoaded', () => {
         mapZoom: 14
     };
 
-    // Remove a classe de loading para indicar ao CSS que o script foi carregado
-    document.body.classList.remove('gsap-loading');
-
-    // Registra os plugins do GSAP
-    gsap.registerPlugin(ScrollTrigger);
-
     // --- Elementos do DOM ---
     const header = document.querySelector('.main-header');
     const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
     
-    // --- Cursor Customizado & Lag LERP (Linear Interpolation) ---
     const cursorDot = document.getElementById('cursor-dot');
     const cursorCircle = document.getElementById('cursor-circle');
+
+    // --- Verificação de Segurança (Resiliência / Modo Offline) ---
+    const hasGSAP = typeof gsap !== 'undefined';
+    const hasScrollTrigger = typeof ScrollTrigger !== 'undefined';
+    const isGsapActive = hasGSAP && hasScrollTrigger;
+
+    if (!isGsapActive) {
+        console.warn("GSAP ou ScrollTrigger não detectados. Ativando modo de compatibilidade e exibindo cursor padrão.");
+        
+        // Força o cursor padrão do sistema e a visibilidade de elementos GSAP
+        document.body.style.cursor = 'default';
+        const fallbackStyle = document.createElement('style');
+        fallbackStyle.innerHTML = `
+            * { cursor: auto !important; }
+            .reveal-gsap, .reveal-gsap-split, .title-line, .page-section { opacity: 1 !important; transform: none !important; }
+            .custom-cursor-dot, .custom-cursor-circle, .glow-orb, .tech-grid-overlay { display: none !important; }
+            .page-section { display: none; }
+            .page-section.active { display: block; }
+        `;
+        document.head.appendChild(fallbackStyle);
+        
+        // Inicializa roteamento estático compatível
+        initStaticRouter();
+        return;
+    }
+
+    // Registra os plugins do GSAP se estiverem disponíveis
+    gsap.registerPlugin(ScrollTrigger);
     
     let mousePos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
     let ringPos = { x: mousePos.x, y: mousePos.y };
@@ -931,5 +955,52 @@ document.addEventListener('DOMContentLoaded', () => {
             leafletMap.invalidateSize();
             leafletMap.setView(CONFIG.mapCenter, CONFIG.mapZoom);
         }
+    }
+
+    // --- Roteador Estático de Fallback (Caso GSAP falhe) ---
+    function initStaticRouter() {
+        const routes = {
+            '#/home': 'home',
+            '#/servicos': 'servicos',
+            '#/contato': 'contato'
+        };
+        const localSections = document.querySelectorAll('.page-section');
+        const localNavLinks = document.querySelectorAll('.nav-link');
+
+        function staticRouter() {
+            const hash = window.location.hash || '#/home';
+            const pageId = routes[hash] || 'home';
+            
+            localSections.forEach(section => {
+                if (section.id === pageId) {
+                    section.classList.add('active');
+                    section.style.display = 'block';
+                    section.style.opacity = '1';
+                } else {
+                    section.classList.remove('active');
+                    section.style.display = 'none';
+                    section.style.opacity = '0';
+                }
+            });
+
+            localNavLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('data-page') === pageId) {
+                    link.classList.add('active');
+                }
+            });
+
+            window.scrollTo({ top: 0, behavior: 'instant' });
+            
+            if (pageId === 'contato') {
+                if (typeof L !== 'undefined') {
+                    setTimeout(initOrRefreshMap, 100);
+                }
+            }
+        }
+
+        window.addEventListener('hashchange', staticRouter);
+        window.addEventListener('load', staticRouter);
+        staticRouter();
     }
 });
