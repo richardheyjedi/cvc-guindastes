@@ -30,6 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let mousePos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
     let ringPos = { x: mousePos.x, y: mousePos.y };
     const lerpSpeed = 0.15; // Velocidade de lag do anel externo
+    let cursorVisible = false;
+
+    // Inicialmente posiciona no centro mas deixa oculto via JS também
+    gsap.set([cursorDot, cursorCircle], { xPercent: -50, yPercent: -50 });
 
     // Atualiza a posição do mouse e do ponto central imediatamente
     window.addEventListener('mousemove', (e) => {
@@ -38,6 +42,12 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Ponto central segue o mouse de forma imediata e exata
         gsap.set(cursorDot, { x: e.clientX, y: e.clientY });
+        
+        // Faz o cursor aparecer suavemente na primeira movimentação do mouse
+        if (!cursorVisible) {
+            gsap.to([cursorDot, cursorCircle], { opacity: 1, duration: 0.3, overwrite: 'auto' });
+            cursorVisible = true;
+        }
     });
 
     // Loop de renderização com GSAP Ticker para o efeito lag elástico do círculo externo
@@ -183,19 +193,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const lines = heroTitle.innerHTML.split('<br>');
             heroTitle.innerHTML = lines.map(line => {
                 return `<div class="title-line-mask" style="overflow:hidden; display:block;">
-                    <span class="title-line" style="display:inline-block; transform:translateY(100%); opacity:0;">${line}</span>
+                    <span class="title-line" style="display:inline-block;">${line}</span>
                 </div>`;
             }).join('');
             heroTitle.classList.add('split-done');
         }
 
-        // Anima as linhas do título subindo
-        tl.to('.title-line', {
-            y: '0%',
-            opacity: 1,
-            duration: 0.85,
-            stagger: 0.15
-        }, '-=1.1');
+        // Anima as linhas do título subindo usando fromTo robusto
+        tl.fromTo('.title-line', 
+            { yPercent: 100, opacity: 0 },
+            { yPercent: 0, opacity: 1, duration: 0.85, stagger: 0.15 },
+            '-=1.1'
+        );
 
         // Revela o subtítulo
         tl.fromTo('.hero-subtitle',
@@ -442,6 +451,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
+
+        // RECALCULA E ATUALIZA TODOS OS GATILHOS DO SCROLLTRIGGER APÓS A CRIAÇÃO
+        ScrollTrigger.refresh();
     };
 
 

@@ -120,7 +120,8 @@ ul {
     transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: 9999;
-    transition: width 0.1s, height 0.1s;
+    opacity: 0;
+    transition: opacity 0.3s, width 0.1s, height 0.1s;
 }
 
 .custom-cursor-circle {
@@ -134,7 +135,9 @@ ul {
     transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: 9998;
-    transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+    opacity: 0;
+    transition: opacity 0.3s, 
+                width 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
                 height 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
                 background-color 0.3s, 
                 border-color 0.3s;
