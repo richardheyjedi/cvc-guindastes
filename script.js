@@ -594,6 +594,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let mapInitialized = false;
     let leafletMap = null;
+    let isFirstLoad = true;
+
+    const sections = document.querySelectorAll('.page-section');
 
     function router() {
         const hash = window.location.hash || '#/home';
@@ -607,19 +610,29 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentSection = document.querySelector('.page-section.active');
         const targetSection = document.getElementById(pageId);
 
-        // Se já está na página correta na inicialização
-        if (!currentSection) {
-            targetSection.classList.add('active');
-            targetSection.style.display = 'block';
-            gsap.set(targetSection, { opacity: 1, y: 0 });
+        // Se for a primeira carga, inicializa tudo explicitamente
+        if (isFirstLoad) {
+            isFirstLoad = false;
             
+            sections.forEach(section => {
+                if (section.id === pageId) {
+                    section.classList.add('active');
+                    section.style.display = 'block';
+                    gsap.set(section, { opacity: 1, y: 0 });
+                } else {
+                    section.classList.remove('active');
+                    section.style.display = 'none';
+                    gsap.set(section, { opacity: 0 });
+                }
+            });
+
             // Roda as animações adequadas
             if (pageId === 'home') runHeroEntrance();
             initScrollAnimations();
             setupCursorHovers();
             setupMagneticElements();
             setup3DTiltCards();
-            initLightbox(); // Atualiza ponteiros da galeria
+            initLightbox();
             
             if (pageId === 'contato') setTimeout(initOrRefreshMap, 100);
             return;
