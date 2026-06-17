@@ -1382,7 +1382,7 @@ ul {
    ========================================================================== */
 .page-header {
     padding: 180px 0 110px;
-    background: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.97)), url('assets/crane_hero.png') center/cover no-repeat;
+    background: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.97)), url('/assets/crane_hero.png') center/cover no-repeat;
     border-bottom: 2px solid var(--primary-color);
     position: relative;
 }
