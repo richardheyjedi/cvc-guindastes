@@ -115,6 +115,8 @@ ul {
     background-color: var(--primary-color);
     border-radius: 50%;
     position: fixed;
+    top: 0;
+    left: 0;
     transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: 9999;
@@ -127,6 +129,8 @@ ul {
     border: 1.5px solid var(--primary-color);
     border-radius: 50%;
     position: fixed;
+    top: 0;
+    left: 0;
     transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: 9998;
