@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVC Locações | Locação de Caminhão Munck e Guindastes em Curitiba e todo o Paraná</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="CVC Locações - Soluções completas para içamento, movimentação e transporte de cargas com segurança, agilidade e operadores qualificados. Atendemos Curitiba e todo o Paraná.">
+    <meta name="keywords" content="Locação de Caminhão Munck, Locação de Guindastes, CVC Locações, Curitiba, Paraná, Içamento de Cargas, Transporte de Máquinas, Içamento Industrial, Remoção de Máquinas, Pinhais">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.cvclocacoes.com.br/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CVC Locações | Locação de Caminhão Munck e Guindastes em Curitiba e todo o Paraná">
+    <meta property="og:description" content="Soluções completas para içamento, movimentação e transporte de cargas com segurança, agilidade e operadores qualificados.">
+    <meta property="og:image" content="/assets/munck_vw19390.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="CVC Locações | Locação de Caminhão Munck e Guindastes em Curitiba e todo o Paraná">
+    <meta property="twitter:description" content="Soluções completas para içamento, movimentação e transporte de cargas com segurança, agilidade e operadores qualificados.">
+    <meta property="twitter:image" content="/assets/munck_vw19390.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Leaflet CSS for premium map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="gsap-loading">
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor-dot" id="cursor-dot"></div>
+    <div class="custom-cursor-circle" id="cursor-circle"></div>
+
+    <!-- Tech Grid & Glow Orbs background -->
+    <div class="tech-grid-overlay"></div>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+
+    <!-- Page Transition Progress Bar -->
+    <div class="page-progress-bar" id="page-progress-bar"></div>
+
+    <!-- WhatsApp Floating Action Button -->
+    <a href="http://wa.me/554195692590" target="_blank" rel="noopener noreferrer" class="whatsapp-fab" aria-label="Falar no WhatsApp" title="Falar no WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- Header / Navbar -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#/home" class="logo magnetic" data-strength="15">
+                <span class="logo-accent">CVC</span><span class="logo-text">LOCAÇÕES</span>
+            </a>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-nav-toggle" aria-label="Abrir menu" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            
+            <nav class="nav-menu" id="primary-navigation">
+                <ul class="nav-list">
+                    <li><a href="#/home" class="nav-link active magnetic" data-page="home" data-strength="10">Home</a></li>
+                    <li><a href="#/caminhoes" class="nav-link magnetic" data-page="caminhoes" data-strength="10">Nossos Caminhões</a></li>
+                    <li><a href="#/servicos" class="nav-link magnetic" data-page="servicos" data-strength="10">Serviços</a></li>
+                    <li><a href="#/sobre" class="nav-link magnetic" data-page="sobre" data-strength="10">Sobre Nós</a></li>
+                    <li><a href="#/contato" class="nav-link magnetic" data-page="contato" data-strength="10">Contato</a></li>
+                    <li><a href="#/contato" class="btn btn-primary btn-nav magnetic" data-strength="12">Orçamento Rápido</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Wrapper for Transitions -->
+    <main class="page-wrapper">
+
+        <!-- ==================== PAGE: HOME ==================== -->
+        <section id="home" class="page-section active">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-bg">
+                    <!-- Vídeo de fundo em loop -->
+                    <video
+                        class="hero-video"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        poster="https://i.ibb.co/QvzsNdxm/CVC-LOCA-O-OU-ALUGUEL-CAMINH-O-GUINDASTES-E-MUNCK-2.jpg"
+                    >
+                        <source src="https://www.image2url.com/r2/default/videos/1783640941897-2314abe6-a3cf-4e1a-bd99-e8fff264ebc8.mp4" type="video/mp4">
+                        <!-- Fallback: imagem estática caso vídeo não carregue -->
+                        <img src="https://i.ibb.co/QvzsNdxm/CVC-LOCA-O-OU-ALUGUEL-CAMINH-O-GUINDASTES-E-MUNCK-2.jpg" alt="Caminhão Munck e Guindaste em operação" class="hero-img">
+                    </video>
+                    <!-- Overlay escuro base (preserva contraste do texto) -->
+                    <div class="hero-overlay"></div>
+                    <!-- Overlay de opacidade extra para suavizar o vídeo -->
+                    <div class="hero-video-tint"></div>
+                </div>
+                <div class="hero-content container">
+                    <div class="hero-badge reveal-gsap">
+                        <span class="badge-dot"></span> Líder em Movimentação de Cargas no Paraná
+                    </div>
+                    <h1 class="hero-title reveal-gsap-split">
+                        Locação de Caminhão Munck <br>e <span class="text-gradient">Guindastes</span>
+                    </h1>
+                    <p class="hero-subtitle reveal-gsap">
+                        Soluções completas para içamento, movimentação e transporte de cargas com segurança, agilidade e operadores qualificados em Curitiba e todo o Paraná.
+                    </p>
+                    <div class="hero-actions reveal-gsap">
+                        <a href="#/contato" class="btn btn-primary btn-large magnetic" data-strength="15">Solicitar Orçamento</a>
+                        <a href="https://wa.me/554195692590?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20loca%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-large btn-whatsapp magnetic" data-strength="15">
+                            <svg class="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.528 2.01 14.069.99 11.999.99c-5.441 0-9.866 4.372-9.87 9.802 0 1.688.46 3.336 1.332 4.794l-.396 1.446-.982 3.585 3.693-.957.902-.505.008-.008zm11.233-7.224c-.3-.15-1.772-.875-2.046-.975-.276-.1-.476-.15-.676.15-.2.3-.775.975-.95 1.175-.175.2-.35.225-.65.075-.3-.15-1.266-.467-2.41-1.485-.89-.795-1.49-1.77-1.665-2.07-.175-.3-.019-.462.13-.61.135-.133.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.625-.926-2.225-.244-.589-.489-.51-.676-.51-.175-.008-.375-.01-.575-.01-.2 0-.525.075-.8.375-.275.3-1.05 1.025-1.05 2.5 0 1.475 1.075 2.9 1.225 3.1.15.2 2.11 3.22 5.116 4.52 1.227.531 2.186.848 2.932 1.085.756.239 1.445.205 1.989.124.607-.091 1.772-.725 2.022-1.425.25-.7.25-1.3 0-1.425-.075-.125-.275-.2-.575-.35z"/>
+                            </svg>
+                            Falar no WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-scroll-indicator reveal-gsap">
+                    <span class="mouse">
+                        <span class="wheel"></span>
+                    </span>
+                    <span class="arrow-down"></span>
+                </div>
+            </section>
+
+            <!-- Quem Somos Section -->
+            <section class="section about-section bg-light">
+                <div class="container grid grid-2-equal align-center">
+                    <div class="about-images gs-reveal-left">
+                        <div class="about-image-main parallax-image-container">
+                            <img src="https://i.ibb.co/Q3RPNBMG/CVC-CAMINH-O-ALUGUEL-GUINDASTE-33.jpg" alt="Frota CVC Locações" class="img-responsive rounded shadow-lg parallax-img">
+                        </div>
+                        <div class="about-badge-experience magnetic" data-strength="8">
+                            <span class="experience-years">PR</span>
+                            <span class="experience-text">Curitiba & <br>Todo Estado</span>
+                        </div>
+                    </div>
+                    <div class="about-content gs-reveal-right">
+                        <span class="section-tagline">Quem Somos</span>
+                        <h2 class="section-title">CVC Locações</h2>
+                        <div class="header-divider left"></div>
+                        <p class="lead">A <strong>CVC Locações</strong> nasceu com o objetivo de oferecer soluções eficientes para movimentação e içamento de cargas.</p>
+                        <p>Atendemos empresas da construção civil, indústrias, engenharia, energia e diversos segmentos. Nossa frota é composta por caminhões Munck e guindastes modernos, revisados e operados por profissionais capacitados, garantindo o melhor custo-benefício e integridade em cada serviço.</p>
+                        <div class="about-actions">
+                            <a href="#/sobre" class="btn btn-primary magnetic" data-strength="15">Saber Mais Sobre Nós</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Diferenciais Section -->
+            <section class="section differentials-section bg-dark">
+                <div class="container">
+                    <div class="section-header text-center gs-reveal-header">
+                        <span class="section-tagline">Por Que Nos Escolher</span>
+                        <h2 class="section-title text-white">Nossos Diferenciais</h2>
+                        <div class="header-divider"></div>
+                    </div>
+                    
+                    <div class="grid grid-3 differentials-grid">
+                        <!-- Card 1 -->
+                        <div class="differential-card gs-reveal-card tilt-card">
+                            <div class="card-icon-wrapper">
+                                <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                                </svg>
+                            </div>
+                            <h3>Equipamentos Modernos</h3>
+                            <p>Frota de última geração com tecnologia avançada e capacidades diversas para atender qualquer projeto.</p>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="differential-card gs-reveal-card tilt-card">
+                            <div class="card-icon-wrapper">
+                                <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                </svg>
+                            </div>
+                            <h3>Operadores Qualificados</h3>
+                            <p>Profissionais experientes, altamente treinados e com certificações em dia para operações seguras.</p>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="differential-card gs-reveal-card tilt-card">
+                            <div class="card-icon-wrapper">
+                                <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg>
+                            </div>
+                            <h3>Atendimento Rápido</h3>
+                            <p>Prontidão comercial e operacional com respostas ágeis para manter seu cronograma no prazo.</p>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="differential-card gs-reveal-card tilt-card">
+                            <div class="card-icon-wrapper">
+                                <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                </svg>
+                            </div>
+                            <h3>Seguro da Carga</h3>
+                            <p>Operações cobertas por seguros robustos, oferecendo tranquilidade total durante a movimentação.</p>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="differential-card gs-reveal-card tilt-card">
+                            <div class="card-icon-wrapper">
+                                <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2a10 10 0 0 1 10 10c0 5.25-9 10-9 10s-9-4.75-9-10A10 10 0 0 1 12 2z" />
+                                    <circle cx="12" cy="12" r="3" />
+                                </svg>
+                            </div>
+                            <h3>Atendimento em Todo Paraná</h3>
+                            <p>Estrutura logística pronta para deslocar equipamentos para qualquer município do estado.</p>
+                        </div>
+                        <!-- Card 6 -->
+                        <div class="differential-card gs-reveal-card tilt-card">
+                            <div class="card-icon-wrapper">
+                                <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                </svg>
+                            </div>
+                            <h3>Planejamento Operacional</h3>
+                            <p>Estudos prévios detalhados e engenharia de rigging para garantir precisão e viabilidade.</p>
+                        </div>
+                        <!-- Card 7 -->
+                        <div class="differential-card gs-reveal-card tilt-card" style="grid-column: span 3; max-width: 500px; margin: 0 auto;">
+                            <div class="card-icon-wrapper">
+                                <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                                </svg>
+                            </div>
+                            <h3>Segurança em Primeiro Lugar</h3>
+                            <p>Rígidos padrões internos alinhados às normas vigentes para eliminação de riscos.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Serviços em Destaque Section -->
+            <section class="section services-destaque bg-white">
+                <div class="container">
+                    <div class="section-header text-center gs-reveal-header">
+                        <span class="section-tagline">O Que Fazemos</span>
+                        <h2 class="section-title">Serviços em Destaque</h2>
+                        <div class="header-divider"></div>
+                    </div>
+                    
+                    <div class="grid grid-4 services-destaque-grid">
+                        <div class="service-destaque-card gs-reveal-card tilt-card">
+                            <span class="card-number">01</span>
+                            <h3>Locação de Caminhão Munck</h3>
+                        </div>
+                        <div class="service-destaque-card gs-reveal-card tilt-card">
+                            <span class="card-number">02</span>
+                            <h3>Locação de Guindastes</h3>
+                        </div>
+                        <div class="service-destaque-card gs-reveal-card tilt-card">
+                            <span class="card-number">03</span>
+                            <h3>Transporte de Máquinas</h3>
+                        </div>
+                        <div class="service-destaque-card gs-reveal-card tilt-card">
+                            <span class="card-number">04</span>
+                            <h3>Içamento Industrial</h3>
+                        </div>
+                        <div class="service-destaque-card gs-reveal-card tilt-card">
+                            <span class="card-number">05</span>
+                            <h3>Movimentação de Equipamentos</h3>
+                        </div>
+                        <div class="service-destaque-card gs-reveal-card tilt-card">
+                            <span class="card-number">06</span>
+                            <h3>Instalação de Geradores</h3>
+                        </div>
+                        <div class="service-destaque-card gs-reveal-card tilt-card">
+                            <span class="card-number">07</span>
+                            <h3>Estruturas Metálicas</h3>
+                        </div>
+                        <div class="service-destaque-card gs-reveal-card tilt-card">
+                            <span class="card-number">08</span>
+                            <h3>Pré-Moldados</h3>
+                        </div>
+                        <div class="service-destaque-card gs-reveal-card tilt-card">
+                            <span class="card-number">09</span>
+                            <h3>Contêineres</h3>
+                        </div>
+                        <div class="service-destaque-card gs-reveal-card tilt-card">
+                            <span class="card-number">10</span>
+                            <h3>Piscinas</h3>
+                        </div>
+                        <div class="service-destaque-card gs-reveal-card tilt-card">
+                            <span class="card-number">11</span>
+                            <h3>Transformadores</h3>
+                        </div>
+                        <div class="service-destaque-card gs-reveal-card tilt-card">
+                            <span class="card-number">12</span>
+                            <h3>Painéis Solares</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Áreas Atendidas Section -->
+            <section class="section areas-atendidas bg-gradient-dark text-white">
+                <div class="container">
+                    <div class="grid grid-2 align-center">
+                        <div class="areas-info gs-reveal-left">
+                            <span class="section-tagline">Cobertura Geográfica</span>
+                            <h2 class="section-title text-white">Áreas Atendidas</h2>
+                            <div class="header-divider left"></div>
+                            <p class="lead">Atendemos de forma ágil e estruturada Curitiba, Região Metropolitana e todo o Estado do Paraná.</p>
+                            <p>Graças a uma logística de deslocamento otimizada, conseguimos alocar nossa frota com rapidez nas principais cidades industriais e canteiros de obras do estado, garantindo suporte completo onde quer que seu projeto esteja localizado.</p>
+                        </div>
+                        <div class="areas-cities gs-reveal-right">
+                            <div class="cities-grid">
+                                <div class="city-tag">Curitiba</div>
+                                <div class="city-tag">Pinhais</div>
+                                <div class="city-tag">São José dos Pinhais</div>
+                                <div class="city-tag">Colombo</div>
+                                <div class="city-tag">Araucária</div>
+                                <div class="city-tag">Campo Largo</div>
+                                <div class="city-tag">Fazenda Rio Grande</div>
+                            </div>
+                            <div class="state-coverage">
+                                <span class="coverage-highlight">e todo o Estado do Paraná.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Galeria de Projetos Section -->
+            <section class="section gallery-section bg-white">
+                <div class="container">
+                    <div class="section-header text-center gs-reveal-header">
+                        <span class="section-tagline">Nossa Frota em Operação</span>
+                        <h2 class="section-title">Galeria de Fotos</h2>
+                        <div class="header-divider"></div>
+                    </div>
+
+                    <!-- Category Filters -->
+                    <div class="gallery-filters reveal-gsap" style="display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; flex-wrap: wrap;">
+                        <button class="btn btn-secondary btn-small gallery-filter-btn active" data-filter="all" style="border-radius: var(--border-radius-full); padding: 10px 24px; color: var(--text-dark); border-color: rgba(0,0,0,0.15); background-color: var(--bg-light);">Todos</button>
+                        <button class="btn btn-secondary btn-small gallery-filter-btn" data-filter="caminhao" style="border-radius: var(--border-radius-full); padding: 10px 24px; color: var(--text-dark); border-color: rgba(0,0,0,0.15); background-color: var(--bg-light);">Nosso Caminhão</button>
+                        <button class="btn btn-secondary btn-small gallery-filter-btn" data-filter="operacoes" style="border-radius: var(--border-radius-full); padding: 10px 24px; color: var(--text-dark); border-color: rgba(0,0,0,0.15); background-color: var(--bg-light);">Operações & Serviços</button>
+                    </div>
+                    
+                    <div class="grid grid-4 gallery-grid">
+                        <!-- Item 1: Operações (Transformador) -->
+                        <div class="gallery-item gs-reveal-gallery-item tilt-card" data-category="operacoes" data-src="https://i.ibb.co/B5cdWTbR/CVC-CAMINH-O-ALUGUEL-GUINDASTE-19.jpg" data-title="Içamento de Transformador" data-desc="Içamento de carga crítica e movimentação pesada com guindaste articulado.">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://i.ibb.co/B5cdWTbR/CVC-CAMINH-O-ALUGUEL-GUINDASTE-19.jpg" alt="Içamento de Transformador" class="gallery-img" loading="lazy">
+                                <div class="gallery-hover-overlay">
+                                    <div class="gallery-hover-content">
+                                        <span class="project-tag">Içamento</span>
+                                        <h4>Içamento de Transformador</h4>
+                                        <p>Curitiba - PR</p>
+                                        <span class="zoom-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 2: Operações (Içamento Geral) -->
+                        <div class="gallery-item gs-reveal-gallery-item tilt-card" data-category="operacoes" data-src="https://i.ibb.co/yntT2PZq/CVC-CAMINH-O-ALUGUEL-GUINDASTE-5.jpg" data-title="Movimentação Industrial" data-desc="Elevação e montagem de componentes industriais com total controle e segurança.">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://i.ibb.co/yntT2PZq/CVC-CAMINH-O-ALUGUEL-GUINDASTE-5.jpg" alt="Movimentação Industrial" class="gallery-img" loading="lazy">
+                                <div class="gallery-hover-overlay">
+                                    <div class="gallery-hover-content">
+                                        <span class="project-tag">Movimentação</span>
+                                        <h4>Montagem de Galpão</h4>
+                                        <p>Pinhais - PR</p>
+                                        <span class="zoom-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 3: Operações (Vigas Metálicas) -->
+                        <div class="gallery-item gs-reveal-gallery-item tilt-card" data-category="operacoes" data-src="https://i.ibb.co/1358ZHF/CVC-CAMINH-O-ALUGUEL-GUINDASTE-35.jpg" data-title="Içamento de Estruturas" data-desc="Carregamento e içamento preciso de vigas metálicas suspensas.">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://i.ibb.co/1358ZHF/CVC-CAMINH-O-ALUGUEL-GUINDASTE-35.jpg" alt="Içamento de Estruturas" class="gallery-img" loading="lazy">
+                                <div class="gallery-hover-overlay">
+                                    <div class="gallery-hover-content">
+                                        <span class="project-tag">Estruturas</span>
+                                        <h4>Estruturas Metálicas</h4>
+                                        <p>Araucária - PR</p>
+                                        <span class="zoom-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 4: Caminhão (Fachada) -->
+                        <div class="gallery-item gs-reveal-gallery-item tilt-card" data-category="caminhao" data-src="https://i.ibb.co/Q3RPNBMG/CVC-CAMINH-O-ALUGUEL-GUINDASTE-33.jpg" data-title="Nosso Caminhão Munck VW" data-desc="Caminhão Munck VW 19.390 moderno de 14 toneladas de capacidade de carga.">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://i.ibb.co/Q3RPNBMG/CVC-CAMINH-O-ALUGUEL-GUINDASTE-33.jpg" alt="CVC Caminhão Munck" class="gallery-img" loading="lazy">
+                                <div class="gallery-hover-overlay">
+                                    <div class="gallery-hover-content">
+                                        <span class="project-tag">Nossa Frota</span>
+                                        <h4>VW 19.390 (2013)</h4>
+                                        <p>Sede Pinhais - PR</p>
+                                        <span class="zoom-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 5: Operações (Elevação de Vigas) -->
+                        <div class="gallery-item gs-reveal-gallery-item tilt-card" data-category="operacoes" data-src="https://i.ibb.co/YFMQDvT7/CVC-CAMINH-O-ALUGUEL-GUINDASTE-36-1.jpg" data-title="Montagem Estrutural" data-desc="Elevação vertical de vigas de aço na cobertura de galpões industriais.">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://i.ibb.co/YFMQDvT7/CVC-CAMINH-O-ALUGUEL-GUINDASTE-36-1.jpg" alt="Montagem Estrutural" class="gallery-img" loading="lazy">
+                                <div class="gallery-hover-overlay">
+                                    <div class="gallery-hover-content">
+                                        <span class="project-tag">Montagem</span>
+                                        <h4>Galpão Comercial</h4>
+                                        <p>Colombo - PR</p>
+                                        <span class="zoom-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 6: Caminhão (Cabine/Guindaste) -->
+                        <div class="gallery-item gs-reveal-gallery-item tilt-card" data-category="caminhao" data-src="https://i.ibb.co/nNKyGkqm/CVC-CAMINH-O-ALUGUEL-GUINDASTE-41.jpg" data-title="Caminhão Pronto para Operação" data-desc="Caminhão Munck posicionado e estabilizado com patolas hidráulicas.">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://i.ibb.co/nNKyGkqm/CVC-CAMINH-O-ALUGUEL-GUINDASTE-41.jpg" alt="Estabilizadores Hidráulicos" class="gallery-img" loading="lazy">
+                                <div class="gallery-hover-overlay">
+                                    <div class="gallery-hover-content">
+                                        <span class="project-tag">Frota</span>
+                                        <h4>Sapatas Estabilizadoras</h4>
+                                        <p>Pinhais - PR</p>
+                                        <span class="zoom-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 7: Caminhão (Frontal) -->
+                        <div class="gallery-item gs-reveal-gallery-item tilt-card" data-category="caminhao" data-src="https://i.ibb.co/QvzsNdxm/CVC-LOCA-O-OU-ALUGUEL-CAMINH-O-GUINDASTES-E-MUNCK-2.jpg" data-title="Deslocamento da Frota" data-desc="Nossos caminhões estão prontos para atendimento em qualquer cidade do Paraná.">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://i.ibb.co/QvzsNdxm/CVC-LOCA-O-OU-ALUGUEL-CAMINH-O-GUINDASTES-E-MUNCK-2.jpg" alt="Deslocamento da Frota" class="gallery-img" loading="lazy">
+                                <div class="gallery-hover-overlay">
+                                    <div class="gallery-hover-content">
+                                        <span class="project-tag">Logística</span>
+                                        <h4>Atendimento PR</h4>
+                                        <p>São José dos Pinhais - PR</p>
+                                        <span class="zoom-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 8: Operações (Postes/Torres) -->
+                        <div class="gallery-item gs-reveal-gallery-item tilt-card" data-category="operacoes" data-src="https://i.ibb.co/BHKrbZF6/CVC-LOCA-O-OU-ALUGUEL-CAMINH-O-GUINDASTES-E-MUNCK-26.jpg" data-title="Içamento e Fixação" data-desc="Locação de caminhão Munck para içamento e fixação de postes e estruturas elevadas.">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://i.ibb.co/BHKrbZF6/CVC-LOCA-O-OU-ALUGUEL-CAMINH-O-GUINDASTES-E-MUNCK-26.jpg" alt="Fixação de Postes" class="gallery-img" loading="lazy">
+                                <div class="gallery-hover-overlay">
+                                    <div class="gallery-hover-content">
+                                        <span class="project-tag">Serviços</span>
+                                        <h4>Postes e Redes</h4>
+                                        <p>Fazenda Rio Grande - PR</p>
+                                        <span class="zoom-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 9: Caminhão (Cabine) -->
+                        <div class="gallery-item gs-reveal-gallery-item tilt-card" data-category="caminhao" data-src="https://i.ibb.co/CKzhjgsB/CVC-CAMINH-O-ALUGUEL-GUINDASTE-42.jpg" data-title="Cabine VW 19.390" data-desc="Cabine robusta e higienizada, operada com conforto e ergonomia por nossa equipe.">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://i.ibb.co/CKzhjgsB/CVC-CAMINH-O-ALUGUEL-GUINDASTE-42.jpg" alt="Cabine VW 19.390" class="gallery-img" loading="lazy">
+                                <div class="gallery-hover-overlay">
+                                    <div class="gallery-hover-content">
+                                        <span class="project-tag">Equipamento</span>
+                                        <h4>Detalhe da Cabine</h4>
+                                        <p>Curitiba - PR</p>
+                                        <span class="zoom-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 10: Caminhão (Sapatas/Guindaste) -->
+                        <div class="gallery-item gs-reveal-gallery-item tilt-card" data-category="caminhao" data-src="https://i.ibb.co/pBtMd70d/CVC-CAMINH-O-ALUGUEL-GUINDASTE-37.jpg" data-title="Detalhes do Equipamento" data-desc="Sistemas mecânicos e hidráulicos de sapatas estabilizadoras constantemente lubrificados.">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://i.ibb.co/pBtMd70d/CVC-CAMINH-O-ALUGUEL-GUINDASTE-37.jpg" alt="Guindaste Hidráulico" class="gallery-img" loading="lazy">
+                                <div class="gallery-hover-overlay">
+                                    <div class="gallery-hover-content">
+                                        <span class="project-tag">Tecnologia</span>
+                                        <h4>Braço Articulado</h4>
+                                        <p>Pinhais - PR</p>
+                                        <span class="zoom-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 11: Operações (Bobinas) -->
+                        <div class="gallery-item gs-reveal-gallery-item tilt-card" data-category="operacoes" data-src="https://i.ibb.co/Pz6TFzvb/CVC-CAMINH-O-ALUGUEL-GUINDASTE-16.jpg" data-title="Transporte Industrial" data-desc="Carregamento e amarração técnica de bobinas pesadas na carroceria de madeira.">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://i.ibb.co/Pz6TFzvb/CVC-CAMINH-O-ALUGUEL-GUINDASTE-16.jpg" alt="Transporte de Bobinas" class="gallery-img" loading="lazy">
+                                <div class="gallery-hover-overlay">
+                                    <div class="gallery-hover-content">
+                                        <span class="project-tag">Cargas</span>
+                                        <h4>Transporte de Bobinas</h4>
+                                        <p>Araucária - PR</p>
+                                        <span class="zoom-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Números da Empresa Section -->
+            <section class="section numbers-section bg-gradient-dark text-white">
+                <div class="container">
+                    <div class="grid grid-4 counters-grid text-center">
+                        <div class="counter-item gs-counter-reveal">
+                            <div class="counter-number-wrapper">
+                                <span class="counter-number" data-target="350">0</span>
+                                <span class="counter-plus">+</span>
+                            </div>
+                            <p class="counter-label">Projetos no Paraná</p>
+                        </div>
+                        <div class="counter-item gs-counter-reveal">
+                            <div class="counter-number-wrapper">
+                                <span class="counter-number" data-target="10">0</span>
+                                <span class="counter-plus">+</span>
+                            </div>
+                            <p class="counter-label">Anos de Atuação</p>
+                        </div>
+                        <div class="counter-item gs-counter-reveal">
+                            <div class="counter-number-wrapper">
+                                <span class="counter-number" data-target="30">0</span>
+                                <span class="counter-plus">+</span>
+                            </div>
+                            <p class="counter-label">Equipamentos Modernos</p>
+                        </div>
+                        <div class="counter-item gs-counter-reveal">
+                            <div class="counter-number-wrapper">
+                                <span class="counter-number" data-target="100">0</span>
+                                <span class="counter-percent">%</span>
+                            </div>
+                            <p class="counter-label">Segurança Operacional</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Depoimentos Google My Business Section -->
+            <section class="section testimonials-section bg-light">
+                <div class="container">
+                    <!-- Cabeçalho GMB -->
+                    <div class="gmb-header-container grid grid-2-equal align-center gs-reveal-gmb-header">
+                        <div>
+                            <span class="section-tagline">Confiança Comprovada</span>
+                            <h2 class="section-title">Avaliações dos Clientes</h2>
+                            <div class="header-divider left"></div>
+                        </div>
+                        
+                        <div class="gmb-badge-summary magnetic" data-strength="6">
+                            <div class="gmb-logo-wrapper">
+                                <svg class="gmb-google-icon" viewBox="0 0 24 24">
+                                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                                </svg>
+                                <span>Google Meu Negócio</span>
+                            </div>
+                            <div class="gmb-stars-summary">
+                                <span class="gmb-rating-num">4.9</span>
+                                <div class="stars-row">
+                                    <span class="star-filled">&#9733;</span>
+                                    <span class="star-filled">&#9733;</span>
+                                    <span class="star-filled">&#9733;</span>
+                                    <span class="star-filled">&#9733;</span>
+                                    <span class="star-filled">&#9733;</span>
+                                </div>
+                                <span class="gmb-reviews-count">(94 Avaliações)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grid de Depoimentos -->
+                    <div class="grid grid-2 testimonials-grid">
+                        
+                        <!-- Depoimento 1 -->
+                        <div class="testimonial-card gs-reveal-testimonial tilt-card">
+                            <div class="testimonial-header">
+                                <div class="avatar avatar-1">CM</div>
+                                <div class="reviewer-meta">
+                                    <h4>Carlos Mendes</h4>
+                                    <p>Diretor de Logística - Construtora Alfa</p>
+                                </div>
+                                <div class="g-icon-card">
+                                    <svg viewBox="0 0 24 24"><path d="M12.24 10.285V14.4h6.887c-.648 2.41-2.519 4.114-6.887 4.114-4.646 0-8.413-3.767-8.413-8.413 0-4.646 3.767-8.414 8.413-8.414 2.14 0 3.966.79 5.378 2.1l3.056-3.057C17.8 1.026 14.86 0 12.24 0 5.48 0 0 5.48 0 12.24s5.48 12.24 12.24 12.24c6.91 0 11.51-4.86 11.51-11.72 0-.79-.07-1.55-.21-2.235H12.24z" fill="#4285F4"/></svg>
+                                </div>
+                            </div>
+                            <div class="stars-row">
+                                <span class="star-filled">&#9733;</span>
+                                <span class="star-filled">&#9733;</span>
+                                <span class="star-filled">&#9733;</span>
+                                <span class="star-filled">&#9733;</span>
+                                <span class="star-filled">&#9733;</span>
+                            </div>
+                            <p class="testimonial-text">"Excelente serviço de locação de Munck. Fizemos o içamento e transporte de máquinas pesadas na nossa fábrica em Pinhais. Operadores muito profissionais."</p>
+                            <span class="testimonial-date">Avaliado há 2 semanas</span>
+                        </div>
+
+                        <!-- Depoimento 2 -->
+                        <div class="testimonial-card gs-reveal-testimonial tilt-card">
+                            <div class="testimonial-header">
+                                <div class="avatar avatar-2">RS</div>
+                                <div class="reviewer-meta">
+                                    <h4>Roberto Souza</h4>
+                                    <p>Engenheiro de Estruturas - TecnoMetal</p>
+                                </div>
+                                <div class="g-icon-card">
+                                    <svg viewBox="0 0 24 24"><path d="M12.24 10.285V14.4h6.887c-.648 2.41-2.519 4.114-6.887 4.114-4.646 0-8.413-3.767-8.413-8.413 0-4.646 3.767-8.414 8.413-8.414 2.14 0 3.966.79 5.378 2.1l3.056-3.057C17.8 1.026 14.86 0 12.24 0 5.48 0 0 5.48 0 12.24s5.48 12.24 12.24 12.24c6.91 0 11.51-4.86 11.51-11.72 0-.79-.07-1.55-.21-2.235H12.24z" fill="#4285F4"/></svg>
+                                </div>
+                            </div>
+                            <div class="stars-row">
+                                <span class="star-filled">&#9733;</span>
+                                <span class="star-filled">&#9733;</span>
+                                <span class="star-filled">&#9733;</span>
+                                <span class="star-filled">&#9733;</span>
+                                <span class="star-filled">&#9733;</span>
+                            </div>
+                            <p class="testimonial-text">"Pontualidade e cuidado com a carga excepcionais. A CVC Locações é a nossa parceira de confiança para montagem de estruturas metálicas em Curitiba e RMC."</p>
+                            <span class="testimonial-date">Avaliado há 1 mês</span>
+                        </div>
+                    </div>
+
+                    <div class="text-center gmb-action-container gs-reveal-gmb-btn">
+                        <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-large btn-gmb magnetic" data-strength="12">
+                            Ver Mais Avaliações no Google Maps
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Home Section -->
+            <section class="section cta-section text-center bg-orange text-white">
+                <div class="container small-container gs-reveal-cta">
+                    <h2>Precisa de uma Solução sob Medida para Sua Obra?</h2>
+                    <p class="lead">Nossa equipe de engenharia e operações está pronta para planejar e executar a movimentação da sua carga com total segurança e eficiência.</p>
+                    <div class="cta-actions">
+                        <a href="#/contato" class="btn btn-secondary btn-large magnetic" data-strength="15">Falar com um Especialista</a>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+
+        <!-- ==================== PAGE: SERVIÇOS ==================== -->
+        <section id="servicos" class="page-section">
+            <section class="page-header bg-dark text-white">
+                <div class="container text-center gs-reveal-header">
+                    <span class="section-tagline">Soluções Corporativas</span>
+                    <h1 class="page-title text-gradient">Nossos Serviços Especializados</h1>
+                    <div class="header-divider"></div>
+                    <p class="page-description">Oferecemos engenharia completa e frota de ponta para movimentação, içamento e logística pesada em diversos segmentos industriais.</p>
+                </div>
+            </section>
+
+            <section class="section services-grid-section bg-light">
+                <div class="container">
+                    <div class="grid grid-3 services-grid">
+                        
+                        <!-- Card 1: Locação de Guindastes -->
+                        <div class="service-card gs-reveal-service tilt-card">
+                            <div class="service-card-image">
+                                <div class="icon-circle-bg">
+                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="service-card-content">
+                                <h3>Locação de Guindastes</h3>
+                                <p>Aluguel de guindastes modernos (telescópicos, articulados e treliçados) com diversas capacidades de carga. Equipamentos inspecionados e prontos para atender obras de infraestrutura, construção civil e montagens industriais com agilidade.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Içamento de Cargas -->
+                        <div class="service-card gs-reveal-service tilt-card">
+                            <div class="service-card-image">
+                                <div class="icon-circle-bg">
+                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="17 11 12 6 7 11" />
+                                        <polyline points="17 18 12 13 7 18" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="service-card-content">
+                                <h3>Içamento de Cargas</h3>
+                                <p>Serviço especializado de içamento vertical e movimentação de estruturas metálicas, peças pré-moldadas, geradores, aparelhos de ar-condicionado central e outros materiais em alturas elevadas, com segurança monitorada e amarração certificada.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Remoção Industrial -->
+                        <div class="service-card gs-reveal-service tilt-card">
+                            <div class="service-card-image">
+                                <div class="icon-circle-bg">
+                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="service-card-content">
+                                <h3>Remoção Industrial</h3>
+                                <p>Mudança de layout fabril, desmobilização e movimentação interna de máquinas pesadas.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: Transporte de Máquinas -->
+                        <div class="service-card gs-reveal-service tilt-card">
+                            <div class="service-card-image">
+                                <div class="icon-circle-bg">
+                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                        <line x1="2" y1="10" x2="22" y2="10" />
+                                        <path d="M6 21v-4M18 21v-4" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="service-card-content">
+                                <h3>Transporte de Máquinas</h3>
+                                <p>Logística completa envolvendo o carregamento, transporte rodoviário e posicionamento seguro de maquinários industriais.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 5: Movimentação Industrial -->
+                        <div class="service-card gs-reveal-service tilt-card">
+                            <div class="service-card-image">
+                                <div class="icon-circle-bg">
+                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="service-card-content">
+                                <h3>Movimentação Industrial</h3>
+                                <p>Remoção técnica e alteração de layout de equipamentos, linhas de produção completas e máquinas pesadas.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 6: Contêineres -->
+                        <div class="service-card gs-reveal-service tilt-card">
+                            <div class="service-card-image">
+                                <div class="icon-circle-bg">
+                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" />
+                                        <line x1="9" y1="3" x2="9" y2="21" />
+                                        <line x1="15" y1="3" x2="15" y2="21" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="service-card-content">
+                                <h3>Contêineres</h3>
+                                <p>Solução rápida para carga, descarga e posicionamento preciso de contêineres de diversos tamanhos em canteiros de obras.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 7: Estruturas Metálicas -->
+                        <div class="service-card gs-reveal-service tilt-card">
+                            <div class="service-card-image">
+                                <div class="icon-circle-bg">
+                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="6" y1="3" x2="6" y2="21" />
+                                        <line x1="18" y1="3" x2="18" y2="21" />
+                                        <line x1="6" y1="12" x2="18" y2="12" />
+                                        <line x1="6" y1="6" x2="18" y2="18" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="service-card-content">
+                                <h3>Estruturas Metálicas</h3>
+                                <p>Montagem técnica, instalação em altura e apoio em obras estruturais metálicas de pequeno, médio e grande porte.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 8: Pré-Moldados -->
+                        <div class="service-card gs-reveal-service tilt-card">
+                            <div class="service-card-image">
+                                <div class="icon-circle-bg">
+                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" />
+                                        <line x1="3" y1="9" x2="21" y2="9" />
+                                        <line x1="3" y1="15" x2="21" y2="15" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="service-card-content">
+                                <h3>Pré-Moldados</h3>
+                                <p>Içamento e montagem de componentes de concreto pré-moldado, como lajes estruturais, vigas pesadas e pilares.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 9: Geradores -->
+                        <div class="service-card gs-reveal-service tilt-card">
+                            <div class="service-card-image">
+                                <div class="icon-circle-bg">
+                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                                        <circle cx="9" cy="10" r="2" />
+                                        <circle cx="15" cy="14" r="2" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="service-card-content">
+                                <h3>Geradores</h3>
+                                <p>Transporte e instalação completa de grupos geradores de energia em indústrias, condomínios ou eventos.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 10: Transformadores -->
+                        <div class="service-card gs-reveal-service tilt-card">
+                            <div class="service-card-image">
+                                <div class="icon-circle-bg">
+                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" />
+                                        <path d="M12 3v18M3 12h18" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="service-card-content">
+                                <h3>Transformadores</h3>
+                                <p>Movimentação técnica e posicionamento preciso de transformadores elétricos em subestações de energia.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 11: Energia Solar -->
+                        <div class="service-card gs-reveal-service tilt-card">
+                            <div class="service-card-image">
+                                <div class="icon-circle-bg">
+                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="4" />
+                                        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="service-card-content">
+                                <h3>Energia Solar</h3>
+                                <p>Içamento de estruturas, módulos fotovoltaicos e equipamentos inversores para projetos de energia solar fotovoltaica.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 12: Piscinas -->
+                        <div class="service-card gs-reveal-service tilt-card">
+                            <div class="service-card-image">
+                                <div class="icon-circle-bg">
+                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M2 12s3-3 10-3 10 3 10 3-3 3-10 3-10-3-10-3z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="service-card-content">
+                                <h3>Piscinas</h3>
+                                <p>Içamento e posicionamento de piscinas de fibra e estruturas para piscinas de concreto em residências e clubes.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 13: Caixas d'Água -->
+                        <div class="service-card gs-reveal-service tilt-card">
+                            <div class="service-card-image">
+                                <div class="icon-circle-bg">
+                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2a10 10 0 0 0-10 10c0 5.52 4.48 10 10 10s10-4.48 10-10A10 10 0 0 0 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="service-card-content">
+                                <h3>Caixas d'Água</h3>
+                                <p>Içamento vertical, posicionamento e suporte na instalação de reservatórios metálicos e caixas d'água de grande volume.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 14: Postes e Torres -->
+                        <div class="service-card gs-reveal-service tilt-card">
+                            <div class="service-card-image">
+                                <div class="icon-circle-bg">
+                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="12" y1="2" x2="12" y2="22" />
+                                        <line x1="5" y1="12" x2="19" y2="12" />
+                                        <line x1="8" y1="6" x2="16" y2="6" />
+                                        <line x1="8" y1="18" x2="16" y2="18" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="service-card-content">
+                                <h3>Postes e Torres</h3>
+                                <p>Içamento e fixação de postes de concreto ou metálicos e montagem técnica de torres de telecomunicação.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="services-action-container text-center gs-reveal-service-btn">
+                        <p class="services-cta-text">Desenvolvemos o plano operacional ideal sob medida para a sua necessidade técnica.</p>
+                        <a href="#/contato" class="btn btn-primary btn-large magnetic" data-strength="15">Solicitar Orçamento de Serviço</a>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- ==================== PAGE: NOSSOS CAMINHÕES ==================== -->
+        <section id="caminhoes" class="page-section">
+            <section class="page-header bg-dark text-white">
+                <div class="container text-center gs-reveal-header">
+                    <span class="section-tagline">Nossa Frota</span>
+                    <h1 class="page-title text-gradient">Nossos Caminhões</h1>
+                    <div class="header-divider"></div>
+                    <p class="page-description">Nossa frota é composta por caminhões Munck modernos, revisados periodicamente e preparados para operações de diferentes portes.</p>
+                </div>
+            </section>
+
+            <section class="section fleet-intro-section bg-light">
+                <div class="container">
+                    <div class="fleet-intro-text text-center gs-reveal-header" style="max-width: 800px; margin: 0 auto 50px auto;">
+                        <p class="lead">Todos os equipamentos recebem manutenção preventiva, inspeções constantes e verificações antes de cada serviço, garantindo segurança e alta performance.</p>
+                    </div>
+
+                    <div class="grid grid-2-equal align-center fleet-specs-grid">
+                        <div class="fleet-image-col gs-reveal-left">
+                            <div class="fleet-img-container rounded shadow-lg tilt-card">
+                                <img src="https://i.ibb.co/nNKyGkqm/CVC-CAMINH-O-ALUGUEL-GUINDASTE-41.jpg" alt="Caminhão Munck VW 19.390" class="img-responsive rounded">
+                            </div>
+                        </div>
+                        <div class="fleet-info-col gs-reveal-right">
+                            <span class="section-tagline">Especificações Técnicas</span>
+                            <h2 class="section-title">VW 19.390 (2013)</h2>
+                            <div class="header-divider left"></div>
+                            
+                            <table class="specs-table">
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Modelo</strong></td>
+                                        <td>VW 19.390 (Ano 2013)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Capacidade de carga</strong></td>
+                                        <td>14ton</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Capacidade do guindaste</strong></td>
+                                        <td>11ton no pé</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Altura máxima</strong></td>
+                                        <td>13 mts vertical</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Alcance horizontal</strong></td>
+                                        <td>15 mts horizontal</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Quantidade de lanças</strong></td>
+                                        <td>4 (4 ton na segunda lança)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Peso bruto</strong></td>
+                                        <td>19.390 kg</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="fleet-ideal-for">
+                                <h4>Ideal para:</h4>
+                                <ul class="fleet-ideal-list">
+                                    <li>
+                                        <svg class="bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                            <polyline points="20 6 9 17 4 12" />
+                                        </svg>
+                                        Máquinas Industriais
+                                    </li>
+                                    <li>
+                                        <svg class="bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                            <polyline points="20 6 9 17 4 12" />
+                                        </svg>
+                                        Containers
+                                    </li>
+                                    <li>
+                                        <svg class="bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                            <polyline points="20 6 9 17 4 12" />
+                                        </svg>
+                                        Pré-moldados
+                                    </li>
+                                    <li>
+                                        <svg class="bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                            <polyline points="20 6 9 17 4 12" />
+                                        </svg>
+                                        Geradores
+                                    </li>
+                                    <li>
+                                        <svg class="bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12" />
+                                        </svg>
+                                        Estruturas metálicas
+                                    </li>
+                                </ul>
+                            </div><!-- /fleet-ideal-for -->
+
+                            <div class="fleet-action" style="margin-top: 30px;">
+                                <a href="#/contato" class="btn btn-primary magnetic" data-strength="12" data-prefill="VW 19.390">Solicitar este equipamento</a>
+                            </div>
+                        </div><!-- /fleet-info-col -->
+                    </div><!-- /fleet-specs-grid -->
+                </div><!-- /container -->
+            </section><!-- /fleet-intro-section -->
+        </section><!-- /#caminhoes -->
+
+        <!-- ==================== PAGE: SOBRE NÓS ==================== -->
+        <section id="sobre" class="page-section">
+
+            <!-- Cabeçalho -->
+            <section class="page-header bg-dark text-white">
+                <div class="container text-center gs-reveal-header">
+                    <span class="section-tagline">Nossa História &amp; Compromisso</span>
+                    <h1 class="page-title text-gradient">Sobre Nós</h1>
+                    <div class="header-divider"></div>
+                    <p class="page-description">Conheça nossa trajetória, política de segurança e valores institucionais.</p>
+                </div>
+            </section>
+
+            <!-- ── Nossa História ── -->
+            <section class="section about-history-section bg-light">
+                <div class="container grid grid-2 align-center">
+                    <div class="history-content">
+                        <span class="section-tagline">Nossa História</span>
+                        <h2 class="section-title">Parceiro de Confiança no Paraná</h2>
+                        <div class="header-divider left"></div>
+                        <p class="lead">A <strong>CVC Locações</strong> atua oferecendo soluções em locação de caminhões Munck e guindastes para empresas de todo o Paraná.</p>
+                        <p style="margin-top:16px;line-height:1.8;color:var(--text-muted);">Nosso compromisso é entregar segurança, pontualidade e excelência em cada operação.</p>
+                    </div>
+                    <div class="history-image">
+                        <img src="https://i.ibb.co/B5cdWTbR/CVC-CAMINH-O-ALUGUEL-GUINDASTE-19.jpg" alt="Içamento industrial no Paraná" class="img-responsive rounded shadow-lg">
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── Segurança ── -->
+            <section class="section about-safety-section bg-dark text-white">
+                <div class="container grid grid-2-equal align-center">
+                    <div class="safety-images">
+                        <img src="https://i.ibb.co/Pz6TFzvb/CVC-CAMINH-O-ALUGUEL-GUINDASTE-16.jpg" alt="Operação segura" class="img-responsive rounded shadow-lg">
+                    </div>
+                    <div class="safety-content">
+                        <span class="section-tagline">Segurança Operacional</span>
+                        <h2 class="section-title text-white">Segurança</h2>
+                        <div class="header-divider left"></div>
+                        <p class="lead">Seguimos rigorosos processos operacionais.</p>
+                        <ul class="about-list" style="margin:25px 0;">
+                            <li><svg class="bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Todos os equipamentos recebem manutenção preventiva.</li>
+                            <li><svg class="bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Planejamento técnico antes de cada operação.</li>
+                            <li><svg class="bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Equipe treinada.</li>
+                            <li><svg class="bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Utilização correta dos estabilizadores.</li>
+                            <li><svg class="bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Respeito às capacidades dos equipamentos.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── Normas | Operadores | Seguro da Carga ── -->
+            <section class="section bg-light">
+                <div class="container">
+                    <div class="grid grid-3" style="gap:30px;">
+
+                        <!-- Normas -->
+                        <div class="rounded shadow-sm" style="background:var(--bg-white);border-top:4px solid var(--primary-color);padding:35px 30px;">
+                            <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
+                                <div style="width:48px;height:48px;background:var(--primary-color);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" style="width:22px;height:22px;"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                                </div>
+                                <h3 style="font-size:1.2rem;color:var(--text-dark);margin:0;">Normas</h3>
+                            </div>
+                            <p style="color:var(--text-muted);font-size:0.92rem;margin-bottom:20px;line-height:1.7;">Atuação baseada nas boas práticas de:</p>
+                            <div style="display:flex;flex-wrap:wrap;gap:10px;">
+                                <span style="background:var(--primary-color);color:#fff;padding:6px 16px;font-weight:700;border-radius:6px;font-size:0.82rem;">NR-11</span>
+                                <span style="background:var(--primary-color);color:#fff;padding:6px 16px;font-weight:700;border-radius:6px;font-size:0.82rem;">NR-12</span>
+                                <span style="background:var(--primary-color);color:#fff;padding:6px 16px;font-weight:700;border-radius:6px;font-size:0.82rem;">NR-18</span>
+                                <span style="background:var(--primary-color);color:#fff;padding:6px 16px;font-weight:700;border-radius:6px;font-size:0.82rem;">Plano de Rigging</span>
+                            </div>
+                        </div>
+
+                        <!-- Operadores -->
+                        <div class="rounded shadow-sm" style="background:var(--bg-white);border-top:4px solid var(--primary-color);padding:35px 30px;">
+                            <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
+                                <div style="width:48px;height:48px;background:var(--primary-color);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" style="width:22px;height:22px;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                </div>
+                                <h3 style="font-size:1.2rem;color:var(--text-dark);margin:0;">Operadores</h3>
+                            </div>
+                            <p style="color:var(--text-muted);font-size:0.92rem;margin-bottom:20px;line-height:1.7;">Todos os operadores possuem experiência na movimentação de cargas.</p>
+                            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px;">
+                                <li style="display:flex;align-items:center;gap:10px;font-size:0.9rem;color:var(--text-dark);"><svg viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="3" style="width:16px;height:16px;flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>Treinamento contínuo.</li>
+                                <li style="display:flex;align-items:center;gap:10px;font-size:0.9rem;color:var(--text-dark);"><svg viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="3" style="width:16px;height:16px;flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>Planejamento operacional.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Seguro da Carga -->
+                        <div class="rounded shadow-sm" style="background:var(--bg-white);border-top:4px solid var(--primary-color);padding:35px 30px;">
+                            <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
+                                <div style="width:48px;height:48px;background:var(--primary-color);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" style="width:22px;height:22px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                </div>
+                                <h3 style="font-size:1.2rem;color:var(--text-dark);margin:0;">Seguro da Carga</h3>
+                            </div>
+                            <p style="color:var(--text-muted);font-size:0.92rem;line-height:1.75;">As operações são realizadas com foco total na preservação da carga, patrimônio e segurança das pessoas envolvidas.</p>
+                        </div>
+
+                    </div><!-- /grid-3 -->
+                </div><!-- /container -->
+            </section><!-- /normas-operadores-seguro -->
+
+            <!-- Missão / Visão / Valores -->
+            <section class="section bg-gradient-dark text-white">
+                <div class="container">
+                    <div class="section-header text-center gs-reveal-header" style="margin-bottom:50px;">
+                        <span class="section-tagline">Nossos Princípios</span>
+                        <h2 class="section-title text-white">Missão, Visão &amp; Valores</h2>
+                        <div class="header-divider"></div>
+                    </div>
+                    <div class="grid grid-3" style="gap:30px;">
+                        <!-- Missão -->
+                        <div class="rounded" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);padding:40px 30px;text-align:center;backdrop-filter:blur(6px);">
+                            <div style="width:60px;height:60px;background:var(--primary-color);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 22px auto;">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" style="width:26px;height:26px;"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                            </div>
+                            <h3 style="font-size:1.25rem;color:var(--primary-color);margin-bottom:14px;">Missão</h3>
+                            <p style="font-size:0.95rem;line-height:1.75;color:rgba(255,255,255,0.82);">Oferecer soluções eficientes em movimentação de cargas.</p>
+                        </div>
+                        <!-- Visão -->
+                        <div class="rounded" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);padding:40px 30px;text-align:center;backdrop-filter:blur(6px);">
+                            <div style="width:60px;height:60px;background:var(--primary-color);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 22px auto;">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" style="width:26px;height:26px;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            </div>
+                            <h3 style="font-size:1.25rem;color:var(--primary-color);margin-bottom:14px;">Visão</h3>
+                            <p style="font-size:0.95rem;line-height:1.75;color:rgba(255,255,255,0.82);">Ser referência em locação de caminhões Munck e guindastes no Paraná.</p>
+                        </div>
+                        <!-- Valores -->
+                        <div class="rounded" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);padding:40px 30px;text-align:center;backdrop-filter:blur(6px);">
+                            <div style="width:60px;height:60px;background:var(--primary-color);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 22px auto;">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" style="width:26px;height:26px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <h3 style="font-size:1.25rem;color:var(--primary-color);margin-bottom:14px;">Valores</h3>
+                            <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:6px;">
+                                <span style="background:rgba(255,107,0,0.18);color:var(--primary-color);padding:4px 14px;border-radius:20px;font-size:0.82rem;font-weight:600;border:1px solid rgba(255,107,0,0.35);">Segurança</span>
+                                <span style="background:rgba(255,107,0,0.18);color:var(--primary-color);padding:4px 14px;border-radius:20px;font-size:0.82rem;font-weight:600;border:1px solid rgba(255,107,0,0.35);">Ética</span>
+                                <span style="background:rgba(255,107,0,0.18);color:var(--primary-color);padding:4px 14px;border-radius:20px;font-size:0.82rem;font-weight:600;border:1px solid rgba(255,107,0,0.35);">Qualidade</span>
+                                <span style="background:rgba(255,107,0,0.18);color:var(--primary-color);padding:4px 14px;border-radius:20px;font-size:0.82rem;font-weight:600;border:1px solid rgba(255,107,0,0.35);">Transparência</span>
+                                <span style="background:rgba(255,107,0,0.18);color:var(--primary-color);padding:4px 14px;border-radius:20px;font-size:0.82rem;font-weight:600;border:1px solid rgba(255,107,0,0.35);">Pontualidade</span>
+                                <span style="background:rgba(255,107,0,0.18);color:var(--primary-color);padding:4px 14px;border-radius:20px;font-size:0.82rem;font-weight:600;border:1px solid rgba(255,107,0,0.35);">Compromisso</span>
+                            </div>
+                        </div>
+                    </div><!-- /grid-3 MVV -->
+                </div><!-- /container -->
+            </section><!-- /MVV -->
+
+        </section><!-- /#sobre -->
+
+        <!-- ==================== PAGE: CONTATO ==================== -->
+        <section id="contato" class="page-section">
+            <section class="page-header bg-dark text-white">
+                <div class="container text-center gs-reveal-header">
+                    <span class="section-tagline">Fale Conosco</span>
+                    <h1 class="page-title text-gradient">Solicite um Orçamento</h1>
+                    <div class="header-divider"></div>
+                    <p class="page-description">Fale com a nossa equipe comercial e operacional. Preencha o formulário ou entre em contato pelo WhatsApp. Nossa equipe está pronta para atender sua empresa.</p>
+                </div>
+            </section>
+
+            <section class="section contact-section bg-light">
+                <div class="container grid grid-2-contact">
+                    
+                    <!-- Coluna 1: Formulário -->
+                    <div class="contact-form-wrapper gs-reveal-contact-form">
+                        <div class="contact-card-premium">
+                            <h3>Envie sua Mensagem</h3>
+                            <p>Preencha os campos abaixo e entraremos em contato rapidamente.</p>
+                            
+                            <form id="contact-form" class="contact-form" novalidate>
+                                <div class="form-row grid grid-2-form">
+                                    <div class="form-group">
+                                        <label for="name">Seu Nome *</label>
+                                        <input type="text" id="name" name="name" required placeholder="Ex: João Silva">
+                                        <span class="error-message">Por favor, insira o seu nome.</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="company">Empresa *</label>
+                                        <input type="text" id="company" name="company" required placeholder="Ex: Minha Empresa Ltda">
+                                        <span class="error-message">Por favor, insira o nome da empresa.</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row grid grid-2-form">
+                                    <div class="form-group">
+                                        <label for="phone">Telefone / WhatsApp *</label>
+                                        <input type="tel" id="phone" name="phone" required placeholder="Ex: (41) 99569-2590">
+                                        <span class="error-message">Por favor, insira um telefone válido.</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">E-mail *</label>
+                                        <input type="email" id="email" name="email" required placeholder="Ex: joao@empresa.com.br">
+                                        <span class="error-message">Por favor, insira um e-mail válido.</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="service_type">Equipamento ou Serviço desejado *</label>
+                                    <div class="select-wrapper">
+                                        <select id="service_type" name="service_type" required>
+                                            <option value="" disabled selected>Selecione uma opção</option>
+                                            <option value="Caminhão Munck VW 19.390">Caminhão Munck VW 19.390 (Frota)</option>
+                                            <option value="Locação de Caminhão Munck">Locação de Caminhão Munck (Serviço)</option>
+                                            <option value="Locação de Guindastes">Locação de Guindastes</option>
+                                            <option value="Transporte de Máquinas">Transporte de Máquinas</option>
+                                            <option value="Içamento de Máquinas">Içamento de Máquinas</option>
+                                            <option value="Movimentação Industrial">Movimentação Industrial</option>
+                                            <option value="Contêineres">Contêineres</option>
+                                            <option value="Estruturas Metálicas">Estruturas Metálicas</option>
+                                            <option value="Pré-Moldados">Pré-Moldados</option>
+                                            <option value="Geradores">Geradores</option>
+                                            <option value="Transformadores">Transformadores</option>
+                                            <option value="Energia Solar">Energia Solar</option>
+                                            <option value="Piscinas">Piscinas</option>
+                                            <option value="Caixas d'Água">Caixas d'Água</option>
+                                            <option value="Postes e Torres">Postes e Torres</option>
+                                            <option value="Outro">Outro Serviço</option>
+                                        </select>
+                                    </div>
+                                    <span class="error-message">Por favor, selecione o equipamento ou serviço.</span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message">Detalhes do Projeto / Mensagem</label>
+                                    <textarea id="message" name="message" rows="5" placeholder="Descreva brevemente a carga, peso estimado, altura, local da operação e prazos do serviço..."></textarea>
+                                </div>
+                                
+                                <div class="form-submit">
+                                    <button type="submit" class="btn btn-primary btn-block btn-submit magnetic" data-strength="10">
+                                        <span class="btn-text">Enviar Solicitação</span>
+                                        <span class="spinner hidden"></span>
+                                    </button>
+                                </div>
+                            </form>
+                            
+                            <!-- Mensagem de Sucesso -->
+                            <div id="form-success" class="form-success-container hidden">
+                                <div class="success-icon-wrapper">
+                                    <svg class="success-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                </div>
+                                <h4>Solicitação Enviada com Sucesso!</h4>
+                                <p>Obrigado pelo contato. Nossa equipe técnica comercial analisará suas informações e retornará em breve.</p>
+                                <button id="btn-reset-form" class="btn btn-secondary btn-small magnetic" data-strength="10">Enviar Nova Mensagem</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Coluna 2: Info de Contato & Mapa -->
+                    <div class="contact-info-wrapper gs-reveal-contact-info">
+                        <div class="contact-details">
+                            <h3>Canais de Atendimento</h3>
+                            <p>Entre em contato direto para suporte operacional ou comercial imediato.</p>
+                            
+                            <div class="contact-info-list">
+                                <!-- WhatsApp -->
+                                <div class="contact-info-item">
+                                    <div class="contact-item-icon color-whatsapp">
+                                        <svg viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.528 2.01 14.069.99 11.999.99c-5.441 0-9.866 4.372-9.87 9.802 0 1.688.46 3.336 1.332 4.794l-.396 1.446-.982 3.585 3.693-.957.902-.505.008-.008zm11.233-7.224c-.3-.15-1.772-.875-2.046-.975-.276-.1-.476-.15-.676.15-.2.3-.775.975-.95 1.175-.175.2-.35.225-.65.075-.3-.15-1.266-.467-2.41-1.485-.89-.795-1.49-1.77-1.665-2.07-.175-.3-.019-.462.13-.61.135-.133.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.625-.926-2.225-.244-.589-.489-.51-.676-.51-.175-.008-.375-.01-.575-.01-.2 0-.525.075-.8.375-.275.3-1.05 1.025-1.05 2.5 0 1.475 1.075 2.9 1.225 3.1.15.2 2.11 3.22 5.116 4.52 1.227.531 2.186.848 2.932 1.085.756.239 1.445.205 1.989.124.607-.091 1.772-.725 2.022-1.425.25-.7.25-1.3 0-1.425-.075-.125-.275-.2-.575-.35z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="contact-item-content">
+                                        <h4>WhatsApp</h4>
+                                        <a href="https://wa.me/554195692590" target="_blank" rel="noopener noreferrer" class="magnetic" data-strength="8">(41) 9569-2590</a>
+                                    </div>
+                                </div>
+                                
+                                <!-- Horário -->
+                                <div class="contact-info-item">
+                                    <div class="contact-item-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <polyline points="12 6 12 12 16 14" />
+                                        </svg>
+                                    </div>
+                                    <div class="contact-item-content">
+                                        <h4>Horário de Atendimento</h4>
+                                        <p>Segunda a sábado: das 08h00 às 19h00</p>
+                                    </div>
+                                </div>
+
+                                <!-- Endereço -->
+                                <div class="contact-info-item">
+                                    <div class="contact-item-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                            <circle cx="12" cy="10" r="3" />
+                                        </svg>
+                                    </div>
+                                    <div class="contact-item-content">
+                                        <h4>Endereço</h4>
+                                        <p>Rua Célio José Pivova, 129<br>Pinhais – PR</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Integrated Leaflet Map -->
+                        <div class="map-container gs-reveal-map">
+                            <div id="leaflet-map" class="map-frame"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-top container">
+            <div class="footer-col brand-col">
+                <a href="#/home" class="logo footer-logo magnetic" data-strength="10">
+                    <span class="logo-accent">CVC</span><span class="logo-text">LOCAÇÕES</span>
+                </a>
+                <p class="footer-description">Especialistas em Locação de Caminhão Munck e Guindastes.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook" class="social-link magnetic" data-strength="6">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.8c4.56-.93 8-4.96 8-9.8z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram" class="social-link magnetic" data-strength="6">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" class="social-link magnetic" data-strength="6">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-col links-col">
+                <h4>Navegação</h4>
+                <ul class="footer-links">
+                    <li><a href="#/home" class="magnetic" data-strength="6">Home</a></li>
+                    <li><a href="#/caminhoes" class="magnetic" data-strength="6">Nossos Caminhões</a></li>
+                    <li><a href="#/servicos" class="magnetic" data-strength="6">Serviços</a></li>
+                    <li><a href="#/sobre" class="magnetic" data-strength="6">Sobre Nós</a></li>
+                    <li><a href="#/contato" class="magnetic" data-strength="6">Contato / Orçamentos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col contact-col">
+                <h4>Fale Conosco</h4>
+                <p><strong>WhatsApp:</strong> (41) 9569-2590</p>
+                <p><strong>Endereço:</strong> Rua Célio José Pivova, 129 - Pinhais – PR</p>
+                <p><strong>Atendimento:</strong> Segunda a sábado, das 08h às 19h</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <p>&copy; 2026 CVC Locações Ltda. Todos os direitos reservados. CNPJ: 00.000.000/0001-00</p>
+                <p class="developer-credit">Desenvolvido com foco em alta performance</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal" id="lightbox-modal">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Fechar galeria">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+        </button>
+        <button class="lightbox-arrow arrow-prev" id="lightbox-prev" aria-label="Imagem anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="15 18 9 12 15 6"/>
+            </svg>
+        </button>
+        <button class="lightbox-arrow arrow-next" id="lightbox-next" aria-label="Próxima imagem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6"/>
+            </svg>
+        </button>
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-img" id="lightbox-img">
+            <div class="lightbox-caption">
+                <h4 id="lightbox-title">Título do Projeto</h4>
+                <p id="lightbox-desc">Descrição técnica do projeto realizado.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leaflet JS for interactive map -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script type="module" src="/script.js"></script>
+</body>
+</html>
