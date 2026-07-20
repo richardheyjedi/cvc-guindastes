@@ -2725,3 +2725,164 @@ ul {
         height: 52px;
     }
 }
+
+/* ==========================================================================
+   ASSINATURA DO RODAPÉ E CORREÇÕES COMPLETAS DE LAYOUT MOBILE
+   ========================================================================== */
+
+/* ── Prevenção Global de Scroll Horizontal ── */
+html, body, .main-wrapper {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* ── Estilização da Assinatura no Rodapé ── */
+.developer-credit {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+}
+
+.developer-credit .signature-link {
+    color: var(--primary-color);
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: 1.5px dotted rgba(255, 107, 0, 0.4);
+    padding-bottom: 2px;
+    display: inline-block;
+}
+
+.developer-credit .signature-link:hover {
+    color: #ff8533;
+    border-bottom-style: solid;
+    border-bottom-color: #ff8533;
+    transform: translateY(-1px);
+}
+
+/* ── Ajustes do Rodapé em Telas Menores ── */
+@media (max-width: 900px) {
+    .footer-top {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+        padding: 60px 0 40px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-bottom-content {
+        flex-direction: column !important;
+        text-align: center !important;
+        justify-content: center !important;
+        gap: 12px !important;
+    }
+}
+
+/* ── Ajustes no Card de Avaliações GMB para Mobile ── */
+@media (max-width: 650px) {
+    .gmb-badge-summary {
+        width: 100% !important;
+        justify-self: center !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 16px !important;
+        padding: 20px 16px !important;
+    }
+
+    .gmb-logo-wrapper {
+        border-right: none !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+        padding-right: 0 !important;
+        padding-bottom: 14px !important;
+        width: 100% !important;
+    }
+
+    .gmb-stars-summary {
+        align-items: center !important;
+    }
+}
+
+/* ── Ajustes no Formulário e Seção de Contato para Mobile ── */
+@media (max-width: 768px) {
+    .grid-2-contact {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+
+    .contact-card-premium {
+        padding: 26px 18px !important;
+    }
+
+    .grid-2-form {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    .contact-info-list {
+        gap: 20px !important;
+    }
+}
+
+/* ── Ajuste dos Botões da Hero em Telas Pequenas ── */
+@media (max-width: 480px) {
+    .hero-actions {
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 14px !important;
+    }
+
+    .hero-actions .btn {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+}
+
+/* ── Ajuste nos Títulos e Tipografia em Smartphones Pequenos (< 400px) ── */
+@media (max-width: 400px) {
+    .hero-title {
+        font-size: 2.2rem !important;
+        letter-spacing: -0.5px !important;
+    }
+
+    .section-title {
+        font-size: 1.9rem !important;
+        letter-spacing: -0.5px !important;
+    }
+
+    .page-title {
+        font-size: 2rem !important;
+    }
+
+    .hero-subtitle {
+        font-size: 0.98rem !important;
+        line-height: 1.55 !important;
+    }
+}
+
+/* ── Controles da Lightbox Galeria em Mobile ── */
+@media (max-width: 600px) {
+    .lightbox-arrow {
+        width: 44px !important;
+        height: 44px !important;
+    }
+
+    .arrow-prev {
+        left: 10px !important;
+    }
+
+    .arrow-next {
+        right: 10px !important;
+    }
+
+    .lightbox-close {
+        top: 15px !important;
+        right: 15px !important;
+        width: 42px !important;
+        height: 42px !important;
+    }
+
+    .lightbox-content {
+        max-width: 92% !important;
+    }
+}
+
