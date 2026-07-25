@@ -1059,7 +1059,7 @@ document.addEventListener('DOMContentLoaded', () => {
             text += `*Mensagem:* ${message}\n`;
         }
 
-        const whatsappUrl = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(text)}`;
+        const whatsappUrl = `https://www.contate.me/cvclocacaodecaminhaomunck`;
         window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
     }
 
